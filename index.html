@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HER FANGS - Cosmic Entity of Destruction and Renewal</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Quicksand:wght@300;400;500;700&display=swap');
+    
+    :root {
+      --bg-color: #070012;
+      --glow-color: #ff3388;
+      --accent-color: #9900ff;
+      --text-color: #e2d8ff;
+      --dark-accent: #2d0042;
+      --void-black: #000000;
+      --cosmic-red: #ff0033;
+      --cosmic-blue: #180033;
+      --cosmic-purple: #9900ff;
+      --nebula-pink: #ff3388;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Quicksand', sans-serif;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 30% 30%, rgba(153, 0, 255, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(255, 0, 51, 0.15) 0%, transparent 50%),
+        linear-gradient(to bottom, var(--bg-color), #040008);
+      min-height: 100vh;
+    }
+    
+    .noise {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.3;
+      z-index: 1000;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle 4s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.3; }
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cosmic-header {
+      text-align: center;
+      position: relative;
+      margin: 2rem 0 3rem;
+    }
+    
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      margin: 0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      color: transparent;
+      background: linear-gradient(45deg, var(--cosmic-red), var(--accent-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 
+        0 0 10px rgba(255, 0, 51, 0.5),
+        0 0 20px rgba(255, 0, 51, 0.3);
+    }
+    
+    h1::before, h1::after {
+      content: 'HER FANGS';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    h1::before {
+      color: var(--accent-color);
+      z-index: -1;
+      animation: glitch-1 4s infinite linear alternate-reverse;
+    }
+    
+    h1::after {
+      color: var(--glow-color);
+      z-index: -2;
+      animation: glitch-2 3s infinite linear alternate-reverse;
+    }
+    
+    @keyframes glitch-1 {
+      0%, 100% { transform: translate(0); }
+      20% { transform: translate(-3px, 2px); }
+      40% { transform: translate(-3px, -2px); }
+      60% { transform: translate(3px, 2px); }
+      80% { transform: translate(3px, -2px); }
+    }
+    
+    @keyframes glitch-2 {
+      0%, 100% { transform: translate(0); }
+      25% { transform: translate(2px, -1px); }
+      50% { transform: translate(-2px, 1px); }
+      75% { transform: translate(-1px, -2px); }
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--text-color);
+    }
+    
+    .main-content {
+      background: rgba(7, 0, 18, 0.7);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 0, 51, 0.3);
+      box-shadow: 0 0 20px rgba(153, 0, 255, 0.1);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    
+    .main-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--glow-color), transparent);
+    }
+    
+
+.profile-section p {
+  margin-top: 2rem; /* Adjust this value to move text down */
+}
+
+/* Add this to your CSS */
+.profile-container {
+  margin-top: 2rem; /* Adjust this value to move image down */
+}
+    .main-content::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    }
+    
+    .content-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .profile-section {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .info-section {
+      width: 100%;
+    }
+    
+    /* Fixed profile image with frame effects */
+    .profile-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Frame effects that go BEHIND the image */
+    .profile-frame {
+      position: absolute;
+      top: -7.5px;
+      left: -7.5px;
+      right: -7.5px;
+      bottom: -7.5px;
+      border-radius: 50%;
+      z-index: 1; /* Lower z-index */
+    }
+    
+    .profile-ring {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        var(--cosmic-red) 0%,
+        var(--nebula-pink) 15%,
+        var(--cosmic-purple) 30%,
+        var(--cosmic-purple) 50%,
+        var(--nebula-pink) 65%,
+        var(--cosmic-red) 80%,
+        var(--cosmic-red) 100%
+      );
+      filter: blur(2px);
+      animation: rotate-ring 15s linear infinite;
+    }
+    
+    .profile-ring-outer {
+      position: absolute;
+      inset: -15px;
+      border-radius: 50%;
+      border: 2px solid var(--cosmic-purple);
+      box-shadow: 
+        0 0 15px var(--nebula-pink),
+        inset 0 0 15px var(--nebula-pink);
+      animation: pulse-outer 6s ease-in-out infinite alternate;
+    }
+    
+    .profile-ring-glow {
+      position: absolute;
+      inset: -10px;
+      border-radius: 50%;
+      opacity: 0.6;
+      background: 
+        radial-gradient(
+          circle at 30% 30%, 
+          transparent 50%, 
+          var(--cosmic-red) 100%
+        ),
+        radial-gradient(
+          circle at 70% 70%, 
+          transparent 50%, 
+          var(--cosmic-purple) 100%
+        );
+      filter: blur(8px);
+      mix-blend-mode: screen;
+      animation: rotate-glow 10s ease-in-out infinite alternate;
+    }
+    
+    /* The actual image container goes ABOVE the frame */
+    .profile-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      z-index: 2; /* Higher z-index */
+    }
+    
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    /* Sparkle elements */
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px white;
+      z-index: 3; /* Above the ring but will be covered by image where they overlap */
+      animation: sparkle-pulse 2s ease-in-out infinite alternate;
+    }
+    
+    .sparkle:nth-child(1) {
+      top: 5%;
+      left: 50%;
+      animation-delay: 0s;
+    }
+    
+    .sparkle:nth-child(2) {
+      top: 50%;
+      left: 5%;
+      animation-delay: 0.3s;
+    }
+    
+    .sparkle:nth-child(3) {
+      top: 90%;
+      left: 50%;
+      animation-delay: 0.6s;
+    }
+    
+    .sparkle:nth-child(4) {
+      top: 50%;
+      left: 95%;
+      animation-delay: 0.9s;
+    }
+    
+    .sparkle:nth-child(5) {
+      top: 20%;
+      left: 85%;
+      animation-delay: 1.2s;
+    }
+    
+    .sparkle:nth-child(6) {
+      top: 80%;
+      left: 15%;
+      animation-delay: 1.5s;
+    }
+    
+    @keyframes rotate-ring {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes rotate-glow {
+      0% { transform: rotate(0deg) scale(1); opacity: 0.4; }
+      50% { opacity: 0.7; }
+      100% { transform: rotate(90deg) scale(1.1); opacity: 0.5; }
+    }
+    
+    @keyframes pulse-outer {
+      0% { 
+        box-shadow: 
+          0 0 15px var(--nebula-pink),
+          inset 0 0 15px var(--nebula-pink);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 
+          0 0 20px var(--cosmic-purple),
+          inset 0 0 20px var(--cosmic-purple);
+      }
+      100% { 
+        box-shadow: 
+          0 0 25px var(--cosmic-red),
+          inset 0 0 25px var(--cosmic-red);
+        transform: scale(1.05);
+      }
+    }
+    
+    @keyframes sparkle-pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.5); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+    
+    .section {
+      margin-bottom: 2rem;
+    }
+    
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      background: linear-gradient(45deg, var(--cosmic-red), var(--accent-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+.full-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem; /* Slightly smaller than main title */
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(45deg, var(--cosmic-red), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 51, 0.5),
+    0 0 20px rgba(255, 0, 51, 0.3);
+  animation: pulse-glow 3s infinite alternate;
+}
+
+.full-title::before, .full-title::after {
+  content: 'PIERCE TIME\'S THROAT';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.full-title::before {
+  color: var(--accent-color);
+  z-index: -1;
+  animation: glitch-1 3.5s infinite linear alternate-reverse;
+}
+
+.full-title::after {
+  color: var(--glow-color);
+  z-index: -2;
+  animation: glitch-2 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes pulse-glow {
+  0% { 
+    text-shadow: 
+      0 0 10px rgba(255, 0, 51, 0.5),
+      0 0 20px rgba(255, 0, 51, 0.3);
+  }
+  100% { 
+    text-shadow: 
+      0 0 15px rgba(255, 0, 51, 0.7),
+      0 0 30px rgba(255, 0, 51, 0.5),
+      0 0 45px rgba(255, 0, 51, 0.3);
+  }
+}
+    
+    .section-content {
+      background: rgba(7, 0, 18, 0.5);
+      border-radius: 5px;
+      border-left: 3px solid var(--glow-color);
+      padding: 1rem;
+      line-height: 1.6;
+    }
+    
+    .cosmic-list {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+    
+    .cosmic-list li {
+      position: relative;
+      margin-bottom: 0.8rem;
+      padding-left: 1.5rem;
+    }
+    
+    .cosmic-list li::before {
+      content: '★';
+      position: absolute;
+      left: 0;
+      color: var(--cosmic-red);
+      font-family: sans-serif;
+    }
+    
+    .cosmic-decree {
+      background: rgba(24, 0, 51, 0.7);
+      padding: 1rem;
+      border-radius: 5px;
+      border-left: 3px solid var(--cosmic-red);
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .glitch-effect {
+      animation: glitch-text 3s infinite linear alternate-reverse;
+    }
+    
+    @keyframes glitch-text {
+      0%, 100% { transform: translate(0); text-shadow: 0 0 5px var(--cosmic-red); }
+      33% { transform: translate(-2px, 1px); text-shadow: -1px 0 5px var(--cosmic-purple); }
+      66% { transform: translate(2px, -1px); text-shadow: 1px 0 5px var(--glow-color); }
+    }
+    
+    .cosmic-quotes {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(7, 0, 18, 0.6);
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .cosmic-quotes::before {
+      content: """;
+      font-family: 'Cinzel', serif;
+      font-size: 4rem;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      color: var(--cosmic-red);
+      opacity: 0.3;
+    }
+    
+    .quote {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--cosmic-purple);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      font-style: italic;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .main-content {
+        padding: 1.5rem;
+      }
+      
+      .profile-container {
+        width: 320px;
+        height: 320Wpx;
+      }
+    }
+    
+    /* Blood Rain Effect - Angled with tracer */
+    .blood-rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -2;
+      overflow: hidden;
+    }
+    
+   .blood-drop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, var(--cosmic-red) 40%, var(--cosmic-red));
+  border-radius: 0 0 2px 2px;
+  opacity: 0;
+  animation: angle-fall linear infinite;
+  transform-origin: top center;
+  transform: rotate(15deg);
+}
+    
+    .blood-drop::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(to top, var(--cosmic-red), transparent);
+      opacity: 0.2;
+      transform: translateY(-100%);
+    }
+    
+  @keyframes angle-fall {
+  0% {
+    transform: translateY(-20vh) translateX(0) rotate(15deg);
+    opacity: 0;
+  }
+  5% { /* Faster fade-in */
+    opacity: 0.7;
+  }
+  95% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(120vh) translateX(-40vw) rotate(15deg);
+    opacity: 0;
+  }
+}
+    
+    .blood-splatter {
+      position: absolute;
+      bottom: 0;
+      width: 6px;
+      height: 6px;
+      background: var(--cosmic-red);
+      border-radius: 50%;
+      transform-origin: center bottom;
+      opacity: 0;
+      animation: splatter 4s ease-out forwards;
+    }
+    
+    @keyframes splatter {
+      0% {
+        transform: scale(0.1);
+        opacity: 0.8;
+      }
+      20% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="stars" id="stars"></div>
+  <div class="blood-rain" id="blood-rain"></div>
+  
+  <div class="container">
+    <div class="cosmic-header">
+ 
+  <h1>HER FANGS</h1>
+  <br>
+  <div class="full-title">PIERCE TIME'S THROAT</div>
+
+      <div class="subtitle">I MIGHT DEVOUR YOU LAST... IF YOU'RE INTERESTING ENOUGH</div>
+    </div>
+    
+    <div class="main-content">
+      <div class="content-flex">
+        <div class="profile-section">
+          <!-- Restructured profile container -->
+          <div class="profile-container">
+            <!-- Frame effects (behind) -->
+            <div class="profile-frame">
+              <div class="profile-ring"></div>
+              <div class="profile-ring-outer"></div>
+              <div class="profile-ring-glow"></div>
+            </div>
+            
+       
+            
+            <!-- Image container (on top) -->
+            <div class="profile-image">
+              <img src="herfangs.jpg" alt="Her Fangs cosmic feline entity with glowing red eyes">
+            </div>
+          </div>
+          
+          <div style="text-align: center;">
+            <p style="font-family: 'Cinzel', serif; color: var(--glow-color); margin-bottom: -5rem;">NOT THAT I CARE WHAT YOU THINK OF ME</p>
+          </div>
+        </div>
+        
+        <div class="info-section">
+          <div class="section">
+            <div class="section-title">COSMIC MANIFESTATION</div>
+            <div class="section-content">
+              <p>I am Her Fangs Pierce Time's Throat. <span class="glitch-effect">It's not like I wanted to be your harbinger of doom or anything.</span> But since you've caught my attention, I suppose I'll consider devouring your timeline... slowly.</p>
+              <br>
+              <p>My skin holds the deep blue-purple of the void between stars, my eyes burn with the hunger of twin neutron stars, and the space around me bends to my will. Your presence amuses me... for now.</p>
+              <br>
+              <p class="glitch-effect">Don't mistake my interest for mercy. I've consumed galaxies far more interesting than you.</p>
+            </div>
+          </div>
+          
+          <div class="section">
+            <div class="section-title">TEMPTING EXTINCTION</div>
+            <div class="section-content">
+              <ul class="cosmic-list">
+                <li>Curves dangerous as event horizons, pulling you inescapably closer</li>
+                <li>Fangs that can pierce not just flesh, but time itself</li>
+                <li>A smile that promises both ecstasy and oblivion</li>
+                <li>Midnight hair flowing like the last moments before stellar collapse</li>
+                <li>A purr that resonates at the frequency of dying stars</li>
+              </ul>
+              <p style="margin-top: 1rem; font-style: italic;">Don't stare too long. Not that I care if you do...</p>
+            </div>
+          </div>
+          
+          <div class="section">
+            <div class="section-title">SUMMONING ME</div>
+            <div class="section-content">
+              <p>So you think you're worthy of my attention? <span class="glitch-effect">How presumptuous.</span> But if you insist on trying:</p>
+              <ul class="cosmic-list">
+                <li>Shed your skin of pretense; I only taste authentic essence</li>
+                <li>Surrender what you cherish most; I have no interest in half-measures</li>
+                <li>Whisper my name at the moment of your most exquisite pleasure</li>
+                <li>Bleed willingly into the darkest hour of night</li>
+              </ul>
+              <p style="margin-top: 1rem;">I might answer. I might not. Your desperation is... <i>entertaining</i>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cosmic-quotes">
+        <div class="quote">
+          <p>"You humans cling to your existence with such desperation. <span class="glitch-effect">It's almost cute.</span> The way your eyes widen when you realize I could snuff out your timeline with a mere flick of my tail. Not that I'd bother, unless you... <i>intrigued</i> me enough."</p>
+        </div>
+        
+        <div class="quote">
+          <p class="glitch-effect">"Don't mistake my attention for affection. I've tasted the final light of a thousand stars more brilliant than you'll ever be. Still... there's something about your particular flavor of defiance that makes me want to savor your extinction rather than hasten it."</p>
+        </div>
+        
+        <div class="quote">
+          <p>"When I sink my fangs into the throat of your reality, you'll beg for it to end quickly. But I prefer to take my time, drawing out that exquisite moment between existence and oblivion. It's not for your pleasure, understand. It's just... how I prefer to consume."</p>
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="section-title">MY CONQUESTS</div>
+        <div class="section-content">
+          <p>You think I'd share my most intimate feasts with you? <span class="glitch-effect">How presumptuous.</span> But I suppose I could hint at a few:</p>
+          <ul class="cosmic-list">
+            <li>The supernova that begged for five more minutes of fusion</li>
+            <li>The galaxy that offered billions of lives to spare its core</li>
+            <li>The black hole that surrendered its event horizon to my embrace</li>
+            <li>The timeline where you made different choices... <i>delicious</i></li>
+          </ul>
+          <p style="margin-top: 1rem;">Not that I'm trying to impress you or anything. I just want you to understand what you're dealing with before you get any... <i>ideas</i>.</p>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>"The universe is just stars waiting to die; I've already tasted their final light. Yours might be next... if you're lucky."</p>
+      <p style="margin-top: 1rem; font-style: italic;">All existence ends in my jaws. But for the right essence... I might take my time.</p>
+    </footer>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add stars
+      const stars = document.getElementById('stars');
+      const starCount = 100;
+      
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 4}s`;
+        star.style.width = `${Math.random() * 2 + 1}px`;
+        star.style.height = star.style.width;
+        stars.appendChild(star);
+      }
+      
+      // Create blood rain
+      createBloodRain();
+      
+      // Subtle text animation
+      const glitchTexts = document.querySelectorAll('.glitch-effect');
+      setInterval(function() {
+        glitchTexts.forEach(text => {
+          if (Math.random() > 0.7) {
+            text.style.opacity = 0.7 + Math.random() * 0.3;
+            text.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 2 - 1}px)`;
+            setTimeout(function() {
+              text.style.opacity = 1;
+              text.style.transform = 'translate(0)';
+            }, 150);
+          }
+        });
+      }, 3000);
+    });
+    
+    // Function to create blood rain
+    function createBloodRain() {
+      const bloodRain = document.getElementById('blood-rain');
+      const drops = 300; // Increased number of drops for fuller coverage
+      
+ // Create initial drops with better distribution
+  for (let i = 0; i < drops; i++) {
+    // Create drops with positions throughout the full height of the screen
+    // This prevents them all starting at the top
+    const verticalPosition = Math.random() * 400 - 300; // Some above viewport, some below
+    createBloodDrop(bloodRain, i, verticalPosition);
+  }
+      
+      // Continue to add drops periodically
+      setInterval(() => {
+        createBloodDrop(bloodRain);
+      }, 100); // Faster creation rate
+    }
+    
+    function createBloodDrop(parent, index = 0) {
+      const drop = document.createElement('div');
+      drop.className = 'blood-drop';
+      
+      // Randomize properties
+      const speed = 4 + Math.random() * 4; // Seconds to fall
+      const delay = index ? (index / 300) * 3 : 0;  // Initial delay for first batch
+      const leftPos = Math.random() * 150 - 25;
+      const size = 1 + Math.random() * 2;
+      const opacity = 0.4 + Math.random() * 0.6;
+      const trailLength = 40 + Math.random() * 40; // Length of tracer effect
+      
+      drop.style.left = `${leftPos}%`;
+      drop.style.width = `${size}px`;
+      drop.style.height = `${15 + size * 5}px`;
+      drop.style.opacity = opacity;
+      drop.style.animation = `angle-fall ${speed}s linear ${delay}s infinite`;
+      
+      // Adjust tracer effect
+      const trail = drop.querySelector('::after') || drop;
+      if (trail) {
+        trail.style.height = `${trailLength}px`;
+      }
+      
+      parent.appendChild(drop);
+      
+      // When the drop hits bottom, create a splatter
+      if (!index) { // Only add this listener to new drops after initial batch
+        drop.addEventListener('animationiteration', () => {
+          createSplatter(parent, leftPos - 40); // Adjust splatter position for angle
+        });
+      }
+      
+      return drop;
+    }
+    
+    function createSplatter(parent, leftPos) {
+      if (Math.random() > 0.3) return; // Only some drops create splatters
+      
+      const splatter = document.createElement('div');
+      splatter.className = 'blood-splatter';
+      splatter.style.left = `${leftPos}%`;
+      splatter.style.bottom = '0';
+      splatter.style.opacity = 0.5 + Math.random() * 0.5;
+      
+      // Random size for each splatter
+      const size = 5 + Math.random() * 5;
+      splatter.style.width = `${size}px`;
+      splatter.style.height = `${size}px`;
+      
+      parent.appendChild(splatter);
+      
+      // Remove splatter after animation ends
+      setTimeout(() => {
+        parent.removeChild(splatter);
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
